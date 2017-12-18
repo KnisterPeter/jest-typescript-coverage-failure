@@ -1,0 +1,35 @@
+{
+  "name": "jest-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^21.1.8",
+    "jest": "^22.0.0",
+    "ts-jest": "^21.2.4",
+    "typescript": "^2.6.2"
+  },
+  "jest": {
+    "watchPathIgnorePatterns": [
+      "/dist/"
+    ],
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "mapCoverage": true,
+    "collectCoverageFrom": [
+      "src/**"
+    ]
+  }
+}
